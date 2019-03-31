@@ -4,20 +4,22 @@ class RenderOptions extends Component {
   constructor() {
     super();
 
-    this.clickedCSS = false;
-    this.clickedViewbox = false;
     this.clickHandlerCSSTransform = this.clickHandlerCSSTransform.bind(this);
+    this.clickHandlerCSS3DTransform = this.clickHandlerCSS3DTransform.bind(this);
     this.clickHandlerViewBox = this.clickHandlerViewBox.bind(this);
   }
   clickHandlerCSSTransform(e) {
     e.preventDefault();
-    if (this.clickedCSS) return;
-
     this.SVGScene.style.transform = 'scale(100)';
-    this.clickedCSS = true;
+  }
+
+  clickHandlerCSS3DTransform(e) {
+    e.preventDefault();
+    this.SVGScene.style.transform = 'perspective(1000px) translateZ(750px)';
   }
 
   clickHandlerViewBox(e) {
+    e.preventDefault();
     let steps = 50 * 5;
     let currentStep = 0;
     let increment = 1000 / steps;
@@ -32,7 +34,6 @@ class RenderOptions extends Component {
       if (++currentStep === steps)
         clearInterval(interval);
     }, 20);
-
   }
 
   componentDidMount() {
@@ -43,6 +44,7 @@ class RenderOptions extends Component {
     return <div id="render-options">
       <div onClick={this.clickHandlerCSSTransform}>Zoom by CSS transform</div>
       <div onClick={this.clickHandlerViewBox}>Zoom by viewBox</div>
+      <div onClick={this.clickHandlerCSS3DTransform}>Zoom by 3D Transform</div>
     </div>
   }
 }

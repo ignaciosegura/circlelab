@@ -9,7 +9,7 @@ class App extends Component {
     return (
       <div className="app">
         <section id="svg-container">
-          <SVGArtboard numberOfCircles="100"></SVGArtboard>
+          <SVGArtboard numberOfCircles="400"></SVGArtboard>
           <RenderOptions></RenderOptions>
         </section>
       </div>
