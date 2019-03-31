@@ -37,7 +37,7 @@ class SVGArtboard extends Component {
     let circles = this.createCircles(this.props.numberOfCircles);
     let viewBoxSettings = `0 0 ${this.sceneSize} ${this.sceneSize}`;
 
-    return <svg width="100%" height="100%" x="0" y="0" viewBox={viewBoxSettings}>
+    return <svg id="svg-box" width="100%" height="100%" x="0" y="0" viewBox={viewBoxSettings}>
       {circles}
     </svg>
   }

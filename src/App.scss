@@ -9,14 +9,18 @@ html, body {
   position: fixed;
   width: 100vmin;
   height: 100vmin;
-
   top: 0;
   left: calc(50% - 50vmin);
+  overflow: hidden;
 
   background: #30014F;
   background: -webkit-radial-gradient(center, #30014F, #170B89);
   background: -moz-radial-gradient(center, #30014F, #170B89);
   background: radial-gradient(ellipse at center, #30014F, #170B89);
+
+  svg {
+    transition: transform 5s ease-out, viewBox 5s ease-out;
+  }
 
   circle {
     fill: transparent;
