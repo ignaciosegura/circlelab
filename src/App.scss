@@ -1,4 +1,5 @@
 $background-color: #170B89;
+$transition-time: 3s;
 
 html, body {
   background: black;
@@ -21,7 +22,7 @@ html, body {
   background: radial-gradient(ellipse at center, #30014F, $background-color);
 
   svg {
-    transition: transform 5s ease-out, viewBox 5s ease-out;
+    transition: transform $transition-time linear, viewBox $transition-time linear;
   }
 
   circle {

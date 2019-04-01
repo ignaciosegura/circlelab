@@ -13,20 +13,17 @@ class RenderOptions extends Component {
   }
   clickHandlerCSSTransform(e) {
     e.preventDefault();
-    this.clickReset(e);
     this.SVGScene.style.transform = 'scale(100)';
   }
 
   clickHandlerCSS3DTransform(e) {
     e.preventDefault();
-    this.clickReset(e);
     this.SVGScene.style.transform = 'perspective(1000px) translateZ(900px)';
   }
 
   clickHandlerViewBox(e) {
     e.preventDefault();
-    this.clickReset(e);
-    let steps = 50 * 5;
+    let steps = 50 * 3;
     let currentStep = 0;
     let increment = 1000 / steps;
 
