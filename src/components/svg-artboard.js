@@ -23,7 +23,7 @@ class SVGArtboard extends Component {
 
     for (let i = 0; i < circles; i++) {
       let currentStep = stepSize * i;
-      let currentStroke = currentStep / 200;
+      let currentStroke = currentStep / 300;
       output.push(
         this.createCircle(center, currentStep, currentStroke, i)
       );

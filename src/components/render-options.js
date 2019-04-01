@@ -25,7 +25,7 @@ class RenderOptions extends Component {
     let increment = 1000 / steps;
 
     let interval = setInterval(() => {
-      let axis = currentStep * (increment / 4);
+      let axis = currentStep * (increment / 5);
       let negativeIncrement = 1000 - (currentStep * increment);
 
       let string = axis + ' ' + axis + ' ' + negativeIncrement + ' ' + negativeIncrement;
