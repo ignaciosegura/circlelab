@@ -11,6 +11,7 @@ class App extends Component {
         <section id="svg-container">
           <SVGArtboard numberOfCircles="400"></SVGArtboard>
           <RenderOptions></RenderOptions>
+          <a id="link-to-github" href="https://github.com/ignaciosegura/circlelab" target="_blank" rel="noopener noreferrer">GITHub repo</a>
         </section>
       </div>
     );
