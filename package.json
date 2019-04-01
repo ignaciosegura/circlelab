@@ -2,6 +2,7 @@
   "name": "circlelab",
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://ignaciosegura.github.io/circlelab",
   "dependencies": {
     "node-sass": "^4.11.0",
     "react": "^16.8.6",
