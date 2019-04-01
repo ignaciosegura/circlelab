@@ -1,3 +1,5 @@
+$background-color: #170B89;
+
 html, body {
   background: black;
   width: 100%;
@@ -14,9 +16,9 @@ html, body {
   overflow: hidden;
 
   background: #30014F;
-  background: -webkit-radial-gradient(center, #30014F, #170B89);
-  background: -moz-radial-gradient(center, #30014F, #170B89);
-  background: radial-gradient(ellipse at center, #30014F, #170B89);
+  background: -webkit-radial-gradient(center, #30014F, $background-color);
+  background: -moz-radial-gradient(center, #30014F, $background-color);
+  background: radial-gradient(ellipse at center, #30014F, $background-color);
 
   svg {
     transition: transform 5s ease-out, viewBox 5s ease-out;
@@ -35,4 +37,18 @@ html, body {
 
   color: white;
   z-index: 1;
+
+  div {
+    background: white;
+    border: solid $background-color 3px;
+    color: black;
+    font-weight: bold;
+    margin-bottom: 1em;
+    padding: 0.25em;
+    cursor: pointer;
+  }
+
+  .reset {
+    color: red;
+  }
 }
